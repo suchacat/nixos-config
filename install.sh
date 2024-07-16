@@ -5,7 +5,7 @@
 # Clone dotfiles
 if [ $# -gt 0 ]
   then
-    SCRIPT_DIR=$1
+    SCRIPT_DIR~/.dotfiles
   else
     SCRIPT_DIR=~/.dotfiles
 fi
