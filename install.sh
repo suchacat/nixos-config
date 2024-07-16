@@ -3,12 +3,7 @@
 # Automated script to install my dotfiles
 
 # Clone dotfiles
-if [ $# -gt 0 ]
-  then
-    SCRIPT_DIR~/.dotfiles
-  else
-    SCRIPT_DIR=~/.dotfiles
-fi
+
 nix-shell -p git --command "git clone https://github.com/suchacat/nixos-config $SCRIPT_DIR"
 
 # Generate hardware config for new system
