@@ -49,6 +49,7 @@
    pkgs.python311Packages.pip
    pkgs.python311Packages.virtualenv
    pkgs.usbmuxd
+   pkgs.virt-manager
   ];
 
 
