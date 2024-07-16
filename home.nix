@@ -18,6 +18,7 @@
     ./sound-control.nix
     ./spicetify.nix
     ./git.nix
+    ./vm.nix
   ];
  
 
@@ -49,7 +50,14 @@
    pkgs.python311Packages.pip
    pkgs.python311Packages.virtualenv
    pkgs.usbmuxd
+   pkgs.libvirt
    pkgs.virt-manager
+    pkgs.virt-viewer
+    pkgs.spice pkgs.spice-gtk
+    pkgs.spice-protocol
+    pkgs.win-virtio
+    pkgs.win-spice
+    pkgs.gnome.adwaita-icon-theme
   ];
 
 

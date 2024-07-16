@@ -81,12 +81,13 @@
   users.users.suchacat = {
     isNormalUser = true;
     description = "suchacat";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
     packages = with pkgs; [
     #  thunderbird
     ];
   };
 
+   virtualisation.libvirtd.enable = true;
   # Install firefox.
   programs.firefox.enable = true;
 
@@ -109,7 +110,7 @@
     nix-output-monitor
     nvd
     jre8
-    snipaste
+    qemu_kvm
   ];
 
 
