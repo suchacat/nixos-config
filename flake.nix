@@ -22,6 +22,10 @@
       lib = nixpkgs.lib;
       system = "x86_64-linux";
       pkgs = import nixpkgs { system = "x86_64-linux"; config = { allowUnfree = true; }; };
+      forAllSystems = inputs.nixpkgs.lib.genAttrs supportedSystems;
+      nixpkgsFor =
+        forAllSystems (system: import inputs.nixpkgs { inherit system; });
+
     in {
       nixosConfigurations = {
         nixos = lib.nixosSystem {
@@ -40,6 +44,27 @@
         ];
 
       };
+    };
+    packages = forAllSystems (system:
+        let pkgs = nixpkgsFor.${system};
+        in {
+          default = self.packages.${system}.install;
+
+          install = pkgs.writeShellApplication {
+            name = "install";
+            runtimeInputs = with pkgs; [ git ]; # I could make this fancier by adding other deps
+            text = ''${./install.sh} "$@"'';
+          };
+        });
+
+      apps = forAllSystems (system: {
+        default = self.apps.${system}.install;
+
+        install = {
+          type = "app";
+          program = "${self.packages.${system}.install}/bin/install";
+        };
+      });
     };
   };
 }
