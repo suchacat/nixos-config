@@ -19,6 +19,7 @@
     ./spicetify.nix
     ./git.nix
     ./vm.nix
+    ./neovim.nix
   ];
  
 
@@ -58,6 +59,7 @@
     pkgs.win-virtio
     pkgs.win-spice
     pkgs.gnome.adwaita-icon-theme
+    pkgs.chromium
   ];
 
 
