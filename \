@@ -20,7 +20,6 @@
     ./git.nix
     ./vm.nix
     ./neovim.nix
-    ./hm-fixes.nix
   ];
  
 
@@ -61,7 +60,7 @@
     pkgs.win-spice
     pkgs.gnome.adwaita-icon-theme
     pkgs.chromium
-    pkgs.lunar-client
+    pkgs.minecraftlauncher
   ];
 
 
