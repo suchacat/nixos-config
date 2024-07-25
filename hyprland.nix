@@ -29,10 +29,10 @@ in
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
         "XCURSOR_SIZE,24"
-        "XCURSOR_THEME,Bibata-Modern-Ice"
+        "XCURSOR_THEME,macOS-Monterey"
         "QT_QPA_PLATFORM,wayland"
         "ELECTRON_OZONE_PLATFORM_HINT,auto"
-        "HYPRCURSOR_THEME,Bibata-Modern-Ice"
+        "HYPRCURSOR_THEME,macOS-Monterey"
         "HYPRCURSOR_SIZE,24"
       ];
     
@@ -128,8 +128,6 @@ in
         gaps_in = 5;
         gaps_out = 20;
         border_size = 3;
-        "col.active_border" = "rgba(05adf5ff) rgba(05f595ff) 45deg";
-        "col.inactive_border" = "rgba(595959aa)";
 
         layout = "dwindle";
 
@@ -154,7 +152,6 @@ in
         drop_shadow = true;
         shadow_range = 4;
         shadow_render_power = 3;
-        "col.shadow" = "rgba(1a1a1aee)";
       };
 
       

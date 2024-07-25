@@ -21,6 +21,7 @@
     ./vm.nix
     ./neovim.nix
     ./hm-fixes.nix
+    ./stylix.nix
   ];
  
 
@@ -63,6 +64,11 @@
     pkgs.chromium
     pkgs.lunar-client
     pkgs.xdg-utils
+    pkgs.planify
+    pkgs.gtk-engine-murrine
+    pkgs.sassc
+    pkgs.gnome-themes-extra
+    pkgs.go
   ];
 
 
@@ -76,7 +82,6 @@
    BROWSER = "firefox";
 	    TERMINAL = "kitty";
 	    NIXOS_OZONE_WL = "1";
-	    QT_QPA_PLATFORMTHEME = "gtk4";
 	    QT_SCALE_FACTOR = "1";
 	    #MOZ_ENABLE_WAYLAND = "1";
 	    SDL_VIDEODRIVER = "wayland";
