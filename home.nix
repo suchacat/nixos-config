@@ -69,6 +69,7 @@
     pkgs.sassc
     pkgs.gnome-themes-extra
     pkgs.go
+    pkgs.lazygit
   ];
 
 
