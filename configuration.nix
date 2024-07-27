@@ -4,6 +4,10 @@
 
 { config, pkgs, inputs, ... }:
 
+let
+  driverPkg = config.boot.kernelPackages.nvidiaPackages.stable;
+in
+
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -111,12 +115,12 @@
     nvd
     jre8
     qemu_kvm
+    pkgs.appimage-run
   ];
 
 
  environment.sessionVariables = {
  FLAKE = "$HOME/.dotfiles";
-
 
   }; 
   
@@ -143,11 +147,20 @@
  
   boot.kernelParams = [ "button.lid_init_state=open" ];
 
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.mkDriver {
+    version = "555.58";
+    sha256_64bit = "sha256-bXvcXkg2kQZuCNKRZM5QoTaTjF4l2TtrsKUvyicj5ew=";
+    sha256_aarch64 = "sha256-7XswQwW1iFP4ji5mbRQ6PVEhD4SGWpjUJe1o8zoXYRE=";
+    openSha256 = "sha256-hEAmFISMuXm8tbsrB+WiUcEFuSGRNZ37aKWvf0WJ2/c=";
+    settingsSha256 = "sha256-vWnrXlBCb3K5uVkDFmJDVq51wrCoqgPF03lSjZOuU8M=";
+    persistencedSha256 = "sha256-lyYxDuGDTMdGxX3CaiWUh1IQuQlkI2hPEs5LI20vEVw=";
+};
 
   services.xserver.videoDrivers = [ "nvidia" ];
-
-
+   
+  #hardware.nvidia.modesetting.enable = true;
+  
+ 
   services.logind.lidSwitchExternalPower = "ignore";
   
   services.logind.lidSwitch = "lock";

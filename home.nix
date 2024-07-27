@@ -16,7 +16,6 @@
     ./hyprlock.nix 
     ./kanshi.nix
     ./sound-control.nix
-    ./spicetify.nix
     ./git.nix
     ./vm.nix
     ./neovim.nix
@@ -62,7 +61,6 @@
     pkgs.win-spice
     pkgs.gnome.adwaita-icon-theme
     pkgs.chromium
-    pkgs.lunar-client
     pkgs.xdg-utils
     pkgs.planify
     pkgs.gtk-engine-murrine
@@ -70,6 +68,8 @@
     pkgs.gnome-themes-extra
     pkgs.go
     pkgs.lazygit
+    pkgs.qbittorrent-qt5
+    pkgs.youtube-music
   ];
 
 
@@ -107,6 +107,7 @@
 	    XDG_CONFIG_HOME = "\${HOME}/.config";
 	    XDG_BIN_HOME = "\${HOME}/.local/bin";
 	    XDG_DATA_HOME = "\${HOME}/.local/share";
+            #VK_DRIVER_FILES= "/run/opengl-driver/share/vulkan/icd.d/nvidia_icd.x86_64.json";
   };
 
   programs.home-manager.enable = true;
