@@ -1,6 +1,11 @@
-Install
+Install Instructions
 
-DONT USE (VERY EXPERIMENTAL)
+1. clone the repo
 
-nix-shell -p git --command "nix run --experimental-features 'nix-command flakes' github:suchacat/nixos-config"
+2. run sudo nixos-rebuild switch --flake .
+
+3. then run nh home switch
+
+4. profit!
+
 
