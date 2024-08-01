@@ -139,10 +139,9 @@ programs.waybar = {
 * {
     border: none;
     border-radius: 0;
+    font-size: 16px;
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: JetBrains Mono;
-    font-weight: bold; 
-    min-height: 20px;
+    min-height: 24px;
 }
 
 window#waybar {

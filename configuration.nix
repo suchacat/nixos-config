@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, lib, ... }:
 
 let
   driverPkg = config.boot.kernelPackages.nvidiaPackages.stable;
@@ -17,6 +17,9 @@ in
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+
+  
+
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -136,6 +139,7 @@ in
       source-han-serif-japanese
       powerline-symbols
       jetbrains-mono
+      joypixels
     ];
     fontconfig.defaultFonts = {
       serif = [ "Noto Serif" "Source Han Serif" ];
@@ -160,6 +164,11 @@ in
    
   #hardware.nvidia.modesetting.enable = true;
   
+ nixpkgs.config.allowUnfreePredicate = pkg:
+            builtins.elem (lib.getName pkg) [
+              "joypixels"
+            ];
+          nixpkgs.config.joypixels.acceptLicense = true;  
  
   services.logind.lidSwitchExternalPower = "ignore";
   

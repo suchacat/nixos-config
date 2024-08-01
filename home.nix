@@ -1,4 +1,5 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, lib, ... }:
+
 
 {
   imports = [
@@ -29,7 +30,7 @@
   home.homeDirectory = "/home/suchacat";
 
    
-
+  nix.nixPath = [ "nixpkgs=/home/suchacat/devel/nixpkgs-22.11" ];  
    
 
   home.stateVersion = "24.05"; 

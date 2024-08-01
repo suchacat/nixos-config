@@ -22,7 +22,10 @@
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
-      pkgs = import nixpkgs { system = "x86_64-linux"; config = { allowUnfree = true; }; };
+      pkgs = import nixpkgs { system = "x86_64-linux"; config = { allowUnfree = true; allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+            "joypixels"
+          ];
+          joypixels.acceptLicense = true; }; };
       supportedSystems = [ "aarch64-linux" "i686-linux" "x86_64-linux" ];
       forAllSystems = inputs.nixpkgs.lib.genAttrs supportedSystems;
       nixpkgsFor =
@@ -35,6 +38,9 @@
           modules = [ ./configuration.nix ];
       };
     };
+   
+    home-manager.useGlobalPkgs = true;
+
     homeConfigurations = {
       suchacat = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;

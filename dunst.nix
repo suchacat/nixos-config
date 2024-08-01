@@ -1,12 +1,12 @@
-{pkgs, ...}: let
-  nixpkgs-unstable = pkgs.unstable;
-in {
+{config, pkgs, ...}: 
+  
+ {
   services.dunst = {
     enable = true;
 
     iconTheme = {
       name = "Papirus-Dark";
-      package = nixpkgs-unstable.papirus-icon-theme;
+      package = pkgs.papirus-icon-theme;
       size = "16x16";
     };
 
@@ -47,7 +47,7 @@ in {
         # will be ignored.
         follow = "keyboard";
 
-        font = "Fira Code 10";
+        #font = "Fira Code 10";
 
         # The format of the message.  Possible variables are:
         #   %a  appname
@@ -115,7 +115,7 @@ in {
         #  * foreground: use the same color as the foreground;
         #  * frame: use the same color as the frame;
         #  * anything else will be interpreted as a X color.
-        separator_color = "#454947";
+       # separator_color = "#454947";
 
         # Draw a line of "separator_height" pixel height between two
         # notifications.
@@ -157,15 +157,15 @@ in {
       };
 
       urgency_critical = {
-        background = urgency_normal.background;
-        foreground = urgency_normal.foreground;
+       # background = urgency_normal.background;
+       # foreground = urgency_normal.foreground;
 
         timeout = 0;
       };
 
       urgency_low = {
-        background = "#162025";
-        foreground = "#bfbfbf";
+       # background = "#162025";
+       # foreground = "#bfbfbf";
 
         timeout = 10;
       };

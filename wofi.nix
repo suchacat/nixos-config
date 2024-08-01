@@ -7,7 +7,7 @@ programs.wofi = {
    enable = true;
    style = ''
 * {
-      font-family: monospace;
+      font-family: sansserif;
   }
 
 window {
@@ -31,7 +31,7 @@ background-color: #2e3440;
 
 #outer-box {
 margin: 5px;
-border: none;
+border: rounded;
 background-color: #2e3440;
 }
 
