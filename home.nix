@@ -21,6 +21,7 @@
     ./neovim.nix
     ./hm-fixes.nix
     ./stylix.nix
+    ./dunst.nix
   ];
  
 
@@ -45,7 +46,7 @@
    pkgs.glfw-wayland-minecraft
    pkgs.libappimage
    pkgs.spicetify-cli
-   pkgs.jre8
+   #pkgs.jre8
    pkgs.obs-studio
    pkgs.gscreenshot
    pkgs.python3
@@ -70,6 +71,10 @@
     pkgs.lazygit
     pkgs.qbittorrent-qt5
     pkgs.youtube-music
+    pkgs.ventoy-full
+    pkgs.temurin-bin-17
+    pkgs.jetbrains.idea-community-bin
+    pkgs.bitwarden
   ];
 
 
