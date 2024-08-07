@@ -2,6 +2,8 @@
                                                                                            
 { pkgs, inputs, config, ... }:
 
+  home.file.".mozilla/firefox/suchacat/chrome/userChrome.css".source = ./userChrome.css;
+
 {
   programs.firefox = {
     enable = true;
@@ -37,10 +39,8 @@
       };
 
       userChrome = ''                         
-
-
-                         
-      '';                                      
+      
+    '';                                      
 
       extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
         bitwarden
