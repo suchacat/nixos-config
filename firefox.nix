@@ -2,9 +2,12 @@
                                                                                            
 { pkgs, inputs, config, ... }:
 
-  home.file.".mozilla/firefox/suchacat/chrome/userChrome.css".source = ./userChrome.css;
+  
 
 {
+ 
+   home.file.".mozilla/firefox/suchacat/chrome/userChrome.css".source = ./userChrome.css;
+
   programs.firefox = {
     enable = true;
     profiles.suchacat = {
@@ -37,10 +40,11 @@
         "browser.urlbar.maxRichResults" = 0;
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
       };
-
-      userChrome = ''                         
+       
       
-    '';                                      
+
+
+                                            
 
       extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
         bitwarden
@@ -48,6 +52,7 @@
         sponsorblock
         tabliss
         youtube-shorts-block
+        return-youtube-dislikes
       ];
 
     };

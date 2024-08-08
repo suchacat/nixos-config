@@ -118,15 +118,17 @@ in
           natural_scroll = false;
         };
 
-        #sensitivity = -0.1; # -1.0 - 1.0, 0 means no modification.
+        #sensitivity = -1.5; # -1.0 - 1.0, 0 means no modification.
       };
     
     device = {
-    name = "razer-razer-hyperpolling-wireless-dongle-1";
-    sensitivity = -0.7;
 
-   };
+    name = "razer-razer-hyperpolling-wireless-dongle";
+    sensitivity = -2.5;
+  };
+
     
+
 
 
 
