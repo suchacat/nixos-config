@@ -23,6 +23,7 @@
     ./hm-fixes.nix
     ./stylix.nix
     ./dunst.nix
+    ./spicetify.nix
   ];
  
 
@@ -73,9 +74,11 @@
     pkgs.qbittorrent-qt5
     pkgs.youtube-music
     pkgs.ventoy-full
-    pkgs.temurin-bin-17
+    pkgs.temurin-bin-21
     pkgs.jetbrains.idea-community-bin
     pkgs.bitwarden
+    pkgs.libudev-zero
+    pkgs.flatpak
   ];
 
 

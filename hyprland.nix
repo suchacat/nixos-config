@@ -41,7 +41,7 @@ in
       [
         "$mainMod, F, exec, firefox"
         "$mainMod, T, exec, kitty"
-        "$mainMod, R, exec, wofi --show drun"
+        "$mainMod, SPACE, exec, wofi --show drun"
         "$mainMod, Q, killactive"
         "$mainMod, L, exec, hyprlock"
         ", Print, exec, grimblast copy area"
