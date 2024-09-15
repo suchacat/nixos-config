@@ -1,5 +1,5 @@
 { pkgs, config, lib, inputs, ... }:
-let spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
+let spicePkgs = inputs.spicetify-nix.packages.${pkgs.system}.default;
 in {
 
   imports = [ inputs.spicetify-nix.homeManagerModules.default ];
@@ -10,23 +10,24 @@ in {
     theme = spicePkgs.themes.text;
     colorScheme = "custom";
 
-    customColorScheme = {
-      text = "${config.var.theme.colors.fg}";
-      subtext = "${config.var.theme.colors.fgalt}";
-      sidebar-text = "${config.var.theme.colors.fgalt}";
-      main = "${config.var.theme.colors.bg}";
-      sidebar = "${config.var.theme.colors.bg}";
-      background = "${config.var.theme.colors.bg}";
-      player = "${config.var.theme.colors.bg}";
-      card = "${config.var.theme.colors.bg}";
-      shadow = "000000";
-      selected-row = "${config.var.theme.colors.bgalt}";
-      button = "${config.var.theme.colors.accent}";
-      button-active = "${config.var.theme.colors.accent}";
-      button-disabled = "${config.var.theme.colors.bgalt}";
-      tab-active = "${config.var.theme.colors.accent}";
-      misc = "${config.var.theme.colors.fgalt}";
-    };
+     customColorScheme = {
+        text = "ebbcba";
+        subtext = "F0F0F0";
+        sidebar-text = "e0def4";
+        main = "191724";
+        sidebar = "2a2837";
+        player = "191724";
+        card = "191724";
+        shadow = "1f1d2e";
+        selected-row = "797979";
+        button = "31748f";
+        button-active = "31748f";
+        button-disabled = "555169";
+        tab-active = "ebbcba";
+        notification = "1db954";
+        notification-error = "eb6f92";
+        misc = "6e6a86";
+      };
 
     enabledExtensions = with spicePkgs.extensions; [
       playlistIcons
@@ -36,6 +37,13 @@ in {
       adblock
       fullAppDisplay
       shuffle
+      
+
+      
     ];
+
+    enabledCustomApps = with spicePkgs.apps; [
+        marketplace
+      ];
   };
 }

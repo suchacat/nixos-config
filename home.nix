@@ -79,6 +79,7 @@
     pkgs.bitwarden
     pkgs.libudev-zero
     pkgs.flatpak
+    pkgs.pavucontrol
   ];
 
 
