@@ -6,10 +6,7 @@
 programs.wofi = {
    enable = true;
    style = ''
-* {
-      font-family: sansserif;
-  }
-
+*
 window {
 margin: 0px;
 border: 1px solid #88c0d0;

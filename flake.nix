@@ -12,13 +12,16 @@
       inputs.nixpkgs.follows = "nixpkgs";
       };
      hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-     spicetify-nix.url = "github:the-argus/spicetify-nix";
+     spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
      stylix.url = "github:danth/stylix";
      home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
   };
 
-  outputs = { self, nixpkgs, home-manager, catppuccin, firefox-addons, stylix,  ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, catppuccin, firefox-addons, stylix, spicetify-nix,  ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -50,6 +53,7 @@
           ./home.nix 
           catppuccin.homeManagerModules.catppuccin
           stylix.homeManagerModules.stylix
+	  inputs.spicetify-nix.homeManagerModules.default
         ];
 
       };

@@ -47,8 +47,7 @@
    pkgs.hypnotix
    pkgs.glfw-wayland-minecraft
    pkgs.libappimage
-   pkgs.spicetify-cli
-   #pkgs.jre8
+   pkgs.nix-prefetch-git
    pkgs.obs-studio
    pkgs.gscreenshot
    pkgs.python3
