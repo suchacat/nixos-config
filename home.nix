@@ -23,7 +23,7 @@
     ./hm-fixes.nix
     ./stylix.nix
     ./dunst.nix
-    ./spicetify.nix
+    #./spicetify.nix
   ];
  
 
@@ -70,7 +70,7 @@
     pkgs.gnome-themes-extra
     pkgs.go
     pkgs.lazygit
-    pkgs.qbittorrent-qt5
+    pkgs.qbittorrent
     pkgs.youtube-music
     pkgs.ventoy-full
     pkgs.temurin-bin-21
@@ -79,6 +79,7 @@
     pkgs.libudev-zero
     pkgs.flatpak
     pkgs.pavucontrol
+    pkgs.brave
   ];
 
 
