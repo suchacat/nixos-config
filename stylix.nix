@@ -35,6 +35,8 @@ stylix = {
    targets = {
     waybar.enable = false;
     wofi.enable = false;
+    hyprlock.enable = false;
+   # hyprland.enable = false;
      };
 
    base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine.yaml";

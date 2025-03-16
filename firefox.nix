@@ -6,7 +6,7 @@
 
 {
  
-   home.file.".mozilla/firefox/suchacat/chrome/userChrome.css".source = ./userChrome.css;
+  #home.file.".mozilla/firefox/suchacat/chrome/userChrome.css".source = ./userChrome.css;
 
   programs.firefox = {
     enable = true;

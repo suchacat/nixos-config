@@ -19,8 +19,7 @@ in
 
     settings = {
    
-    monitor = "eDP-1,1920x1080@180,0x0,1";
-
+    monitor = "DP-1,1920x1080@180,0x0,1,vrr,1";
    
     exec-once = ''${startupScript}/bin/start'';
 
@@ -124,7 +123,7 @@ in
     device = {
 
     name = "razer-razer-hyperpolling-wireless-dongle";
-    sensitivity = -2.5;
+    sensitivity = -0.5;
   };
 
     
@@ -157,9 +156,7 @@ in
           new_optimizations = true;
         };
 
-        drop_shadow = true;
-        shadow_range = 4;
-        shadow_render_power = 3;
+        
       };
 
       

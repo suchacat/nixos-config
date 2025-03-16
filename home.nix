@@ -38,6 +38,7 @@
   
   home.packages = [
    pkgs.waybar
+   pkgs.lshw
    pkgs.swww
    pkgs.rofi-wayland
    pkgs.themix-gui
@@ -61,7 +62,7 @@
     pkgs.spice-protocol
     pkgs.win-virtio
     pkgs.win-spice
-    pkgs.gnome.adwaita-icon-theme
+    pkgs.adwaita-icon-theme
     pkgs.chromium
     pkgs.xdg-utils
     pkgs.planify
