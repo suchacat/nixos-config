@@ -8,6 +8,7 @@
       sleep 1
   
       swww img wallpaper.png &
+      hyprctl setcursor [macOS-Monterey] [24]
     '';
 in
 
@@ -43,7 +44,7 @@ in
         "$mainMod, SPACE, exec, wofi --show drun"
         "$mainMod, Q, killactive"
         "$mainMod, L, exec, hyprlock"
-        ", Print, exec, grimblast copy area"
+        ", Print, exec, grimblast copysave area"
 
         # Move focus with mainMod + arrow keys
         "$mainMod, left,  movefocus, l"

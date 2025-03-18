@@ -42,10 +42,10 @@
    pkgs.swww
    pkgs.rofi-wayland
    pkgs.themix-gui
-   pkgs.gradience
+#   pkgs.gradience
    pkgs.prismlauncher
    pkgs.vesktop
-   pkgs.hypnotix
+  # pkgs.hypnotix
    pkgs.glfw-wayland-minecraft
    pkgs.libappimage
    pkgs.nix-prefetch-git
@@ -56,12 +56,12 @@
    pkgs.python311Packages.virtualenv
    pkgs.usbmuxd
    pkgs.libvirt
-   pkgs.virt-manager
-    pkgs.virt-viewer
-    pkgs.spice pkgs.spice-gtk
-    pkgs.spice-protocol
-    pkgs.win-virtio
-    pkgs.win-spice
+ #  pkgs.virt-manager
+  #  pkgs.virt-viewer
+  #  pkgs.spice pkgs.spice-gtk
+   # pkgs.spice-protocol
+   # pkgs.win-virtio
+   # pkgs.win-spice
     pkgs.adwaita-icon-theme
     pkgs.chromium
     pkgs.xdg-utils
@@ -70,17 +70,18 @@
     pkgs.sassc
     pkgs.gnome-themes-extra
     pkgs.go
-    pkgs.lazygit
+   # pkgs.lazygit
     pkgs.qbittorrent
     pkgs.youtube-music
     pkgs.ventoy-full
     pkgs.temurin-bin-21
-    pkgs.jetbrains.idea-community-bin
+   # pkgs.jetbrains.idea-community-bin
     pkgs.bitwarden
     pkgs.libudev-zero
     pkgs.flatpak
     pkgs.pavucontrol
     pkgs.brave
+    pkgs.grimblast
   ];
 
 
