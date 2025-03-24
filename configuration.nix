@@ -181,12 +181,24 @@ in
   services.logind.lidSwitch = "lock";
 
   services.blueman.enable = true;
+
+  services.flatpak.enable = true;
    
   security.pam.services.hyprlock = {};
  
   programs.nm-applet.enable = true;
  
   programs.hyprland.enable = true;
+
+  programs.steam.enable = true;
+
+  hardware.opengl.driSupport32Bit = true;
+
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [
+    # Add any missing dynamic libraries for unpackaged programs
+    # here, NOT in environment.systemPackages
+  ];
   
   system.stateVersion = "24.05"; # Did you read the comment?
 

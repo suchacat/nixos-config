@@ -18,10 +18,14 @@
     };
      stylix.url = "github:danth/stylix";
      home-manager.inputs.nixpkgs.follows = "nixpkgs";
+     nixvim = {
+        url = "github:nix-community/nixvim";
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
 
   };
 
-  outputs = { self, nixpkgs, home-manager, catppuccin, firefox-addons, stylix, spicetify-nix,  ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, catppuccin, firefox-addons, stylix, spicetify-nix, nixvim,  ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -54,6 +58,7 @@
           catppuccin.homeManagerModules.catppuccin
           stylix.homeManagerModules.stylix
 	  inputs.spicetify-nix.homeManagerModules.default
+	  nixvim.homeManagerModules.nixvim
         ];
 
       };
